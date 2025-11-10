@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade js</title>
+    <style>
+        button {
+            color: white;
+            background-color: rgb(106, 100, 184);
+            padding: 20px;
+            border-radius: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Interagindo com um Botão</h1>
+    <button onclick="exibirMensagemBoasVindas()";>Exibir Mensagem de Boas Vindas </button>
+    <br><br>
+    <button onclick="perguntarNome()"> Digite seu nome</button>
+
+    <script>
+        function exibirMensagemBoasVindas() {
+            window.alert('Olá, mundo! Este é o meu primeiro script JS!');
+        }
+
+        function perguntarNome() {
+            let nomeDoUsuario = window.prompt('Por favor, digite o seu nome:');
+            window.alert(`Olá, ${nomeDoUsuario}! É um prazer te conhecer através desta página!);.`);
+
+        }
+    </script>
+</body>
+
+</html>
