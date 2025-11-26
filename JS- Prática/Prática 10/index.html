@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Interativo</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <script src="script.js" defer></script>
+
+    <div class="container">
+        <h2>Cadastro Interativo</h2>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="formCadastro">
+
+            <!-- ETAPA 1 -->
+            <fieldset class="active">
+                <h3>Dados Pessoais</h3>
+                <div class="error" id="erro1"></div>
+
+                <label>Nome completo</label>
+                <input type="text" id="nome" required>
+
+                <label>E-mail</label>
+                <input type="email" id="email" required>
+
+                <label>Telefone</label>
+                <input type="tel" id="telefone" maxlength="15" required>
+
+                <label>Data de nascimento</label>
+                <input type="date" id="nascimento" required>
+
+                <div class="buttons">
+                    <button type="button" id="next1">Próximo</button>
+                </div>
+            </fieldset>
+
+            <!-- ETAPA 2 -->
+            <fieldset>
+                <h3>Endereço</h3>
+                <div class="error" id="erro2"></div>
+
+                <label>CEP</label>
+                <input type="text" id="cep" maxlength="9" required>
+
+                <label>Logradouro</label>
+                <input type="text" id="logradouro" required>
+
+                <label>Número</label>
+                <input type="text" id="numero" required>
+
+                <label>Bairro</label>
+                <input type="text" id="bairro" required>
+
+                <label>Cidade</label>
+                <input type="text" id="cidade" required>
+
+                <label>Complemento</label>
+                <input type="text" id="complemento">
+
+                <label>Estado</label>
+                <select id="estado" required>
+                    <option value="">Selecione</option>
+                    <option>RN</option>
+                    <option>PB</option>
+                    <option>PE</option>
+                    <option>CE</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="button" class="back">Anterior</button>
+                    <button type="button" id="next2">Próximo</button>
+                </div>
+            </fieldset>
+
+            <!-- ETAPA 3 -->
+            <fieldset>
+                <h3>Perfil Profissional</h3>
+                <div class="error" id="erro3"></div>
+
+                <label>Profissão</label>
+                <input type="text" id="profissao" required>
+
+                <label>Empresa</label>
+                <input type="text" id="empresa">
+
+                <label>Áreas de interesse</label>
+                <select id="interesses" multiple size="4" required>
+                    <option>Front-end</option>
+                    <option>Back-end</option>
+                    <option>UI/UX</option>
+                    <option>Mobile</option>
+                </select>
+
+                <label>Sobre você</label>
+                <textarea id="sobre" rows="4"></textarea>
+
+                <div class="buttons">
+                    <button type="button" class="back">Anterior</button>
+                    <button type="button" id="next3">Próximo</button>
+                </div>
+            </fieldset>
+
+            <!-- ETAPA 4 -->
+            <fieldset>
+                <h3>Confirmação</h3>
+                <div id="resumo"></div>
+
+                <div class="buttons">
+                    <button type="button" class="back">Anterior</button>
+                    <button type="submit">Finalizar</button>
+                </div>
+            </fieldset>
+
+        </form>
+
+        <div class="success" id="mensagemSucesso" style="display:none;">
+            Cadastro finalizado com sucesso!
+        </div>
+    </div>
+
+</body>
+
+</html>
